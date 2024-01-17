@@ -1,0 +1,175 @@
+:root {
+  --negro: rgb(41, 41, 41);
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body{
+  font-family: 'PT Serif', serif;
+}
+
+
+/*HEADER*/
+header {
+  padding-inline: 2.7rem;
+  position: fixed; /* Fija el encabezado en la posición superior */
+  top: 0; /* Lo coloca en la parte superior de la ventana del navegador */
+  width: 100%; /* Ocupa todo el ancho de la ventana */
+  background-color: #ffffff; /* Cambia el color de fondo según tus preferencias */
+  z-index: 1; /* Ajusta el índice z para asegurarte de que esté por encima de otros elementos */
+}
+
+
+main {
+  margin-top: 300px;
+  width: 100%;
+  padding-inline: 2.7rem;
+}
+
+.navegacion {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  opacity: 1;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.texto-logo-oculto {
+  opacity: 0;
+  display: inline-block;
+
+  transition: opacity 0.5s, transform 0.3s; /* Agrega una transición suave */
+}
+#logo{
+  font-size: 7rem ;
+}
+
+#logo{
+  transition: opacity 0.3s;
+}
+
+h1:hover .texto-logo-oculto {
+  opacity: 1;
+}
+
+.information {
+  width: 50%;
+}
+
+.information p {
+  font-size: 14px;
+}
+
+.information-2 {
+  width: 45%;
+}
+
+.information-2 h3 {
+  font-size: 28px;
+
+  color: var(--negro);
+  line-height: 1.2;
+}
+
+.project-card {
+  height: 361.156px;
+  width: 309.25px;
+  border-top: 2px solid rgb(235, 235, 235);
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .project-card {
+    width: 100%;
+  }
+}
+
+.contenedor-img {
+  height: 300px;
+  width: 250px;
+}
+
+.contenedor-img img {
+  text-align: center;
+}
+
+
+/*LOGO */
+/* Tamaño de fuente predeterminado */
+
+/* Ajusta el tamaño de fuente en pantallas más pequeñas */
+@media (max-width: 640px) {
+  
+  header{
+    width: 100% !important;
+    padding: none;
+
+  }
+  
+  main{
+  
+  }
+  #logo {
+    font-size: 2rem !important; /* Reduce el tamaño de fuente para pantallas pequeñas */
+
+  }
+}
+
+/* Ajusta el tamaño de fuente en pantallas medianas */
+@media (min-width: 641px) and (max-width: 1024px) {
+  #logo {
+    font-size: 3.5rem !important; /* Ajusta el tamaño de fuente para pantallas medianas */
+
+  }
+}
+
+@media (width: 1280px) {
+  #logo {
+    font-size: 7.7rem !important; /* Ajusta el tamaño de fuente para pantallas medianas */
+  
+  }
+}
+
+@media (min-width: 1049) and (max-width: 1277) {
+  #logo {
+    font-size: 1rem; /* Ajusta el tamaño de fuente para pantallas medianas */
+    color:blue;
+  }
+}
+
+
+ 
+/*FORMULARIO */
+form{
+  border: 1px solid rgb(229, 231, 235);
+  padding: 1rem .5rem;
+  height: 300px;
+}
+
+form label{
+  color: black;
+}
+
+form input{
+  border: 1px solid rgb(229, 231, 235);
+}
+
+form button{
+  background-color: rgb(229, 231, 235) !important;
+  padding-block: .5rem;
+  
+}
+
+.text-card-mini{
+  font-size: 12px;
+  color:rgb(229, 231, 235) ;
+}
