@@ -10,26 +10,24 @@ import {
 } from "react-router-dom";
 import Me from './components/me/Me.jsx';
 import Projects from './components/projects/Projects.jsx';
+import ProjectInfo from './components/me/ProjectInfo.jsx';
+import ProjectInfoModal from './components/Projects/ProjectInfoModal.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/me",
-        element: <Me />
-      },
-      {
-        path: "/proyectos",
-        element: <Projects />
-      },
-      {
-        path: "/me",
-        element: <Me />
-      },
-    ]
+    element: <App />
   },
+  {
+    path: "/me",
+    element: <Me />
+  },
+  {
+    path:'/proyectos/proyectoInfo/:name',
+    element: <ProjectInfoModal/>
+  }
+
+  
 
 ])
 

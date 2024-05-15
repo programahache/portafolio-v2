@@ -5,6 +5,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -12,24 +13,27 @@ html {
 }
 
 
-body{
-  font-family: 'PT Serif', serif;
-}
+
 
 
 /*HEADER*/
 header {
   padding-inline: 2.7rem;
-  position: fixed; /* Fija el encabezado en la posición superior */
-  top: 0; /* Lo coloca en la parte superior de la ventana del navegador */
-  width: 100%; /* Ocupa todo el ancho de la ventana */
-  background-color: #ffffff; /* Cambia el color de fondo según tus preferencias */
-  z-index: 1; /* Ajusta el índice z para asegurarte de que esté por encima de otros elementos */
+  position: fixed;
+  /* Fija el encabezado en la posición superior */
+  top: 0;
+  /* Lo coloca en la parte superior de la ventana del navegador */
+  width: 100%;
+  /* Ocupa todo el ancho de la ventana */
+  background-color: #ffffff;
+  /* Cambia el color de fondo según tus preferencias */
+  z-index: 1;
+  /* Ajusta el índice z para asegurarte de que esté por encima de otros elementos */
 }
 
 
 main {
-  margin-top: 300px;
+  margin-top: 270px;
   width: 100%;
   padding-inline: 2.7rem;
 }
@@ -47,13 +51,15 @@ main {
   opacity: 0;
   display: inline-block;
 
-  transition: opacity 0.5s, transform 0.3s; /* Agrega una transición suave */
-}
-#logo{
-  font-size: 7rem ;
+  transition: opacity 0.5s, transform 0.3s;
+  /* Agrega una transición suave */
 }
 
-#logo{
+#logo {
+  font-size: 8.5rem;
+}
+
+#logo {
   transition: opacity 0.3s;
 }
 
@@ -81,8 +87,8 @@ h1:hover .texto-logo-oculto {
 }
 
 .project-card {
-  height: 361.156px;
-  width: 309.25px;
+  height: 400.156px;
+
   border-top: 2px solid rgb(235, 235, 235);
   overflow: hidden;
 }
@@ -94,12 +100,25 @@ h1:hover .texto-logo-oculto {
 }
 
 .contenedor-img {
-  height: 300px;
-  width: 250px;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+
+}
+
+.container-cont-img {
+  background-color: rgba(235, 235, 235, 0.938);
+  padding: 1.5rem;
+  transition: background-color .2s ease-out
+}
+
+.container-cont-img:hover {
+  background-color: rgb(189, 189, 189);
 }
 
 .contenedor-img img {
   text-align: center;
+
 }
 
 
@@ -108,18 +127,18 @@ h1:hover .texto-logo-oculto {
 
 /* Ajusta el tamaño de fuente en pantallas más pequeñas */
 @media (max-width: 640px) {
-  
-  header{
+
+  header {
     width: 100% !important;
     padding: none;
 
   }
-  
-  main{
-  
-  }
+
+  main {}
+
   #logo {
-    font-size: 2rem !important; /* Reduce el tamaño de fuente para pantallas pequeñas */
+    font-size: 2rem !important;
+    /* Reduce el tamaño de fuente para pantallas pequeñas */
 
   }
 }
@@ -127,49 +146,64 @@ h1:hover .texto-logo-oculto {
 /* Ajusta el tamaño de fuente en pantallas medianas */
 @media (min-width: 641px) and (max-width: 1024px) {
   #logo {
-    font-size: 3.5rem !important; /* Ajusta el tamaño de fuente para pantallas medianas */
+    font-size: 3.5rem !important;
+    /* Ajusta el tamaño de fuente para pantallas medianas */
 
   }
 }
 
 @media (width: 1280px) {
   #logo {
-    font-size: 7.7rem !important; /* Ajusta el tamaño de fuente para pantallas medianas */
-  
+    font-size: 7.7rem !important;
+    /* Ajusta el tamaño de fuente para pantallas medianas */
+
   }
 }
 
 @media (min-width: 1049) and (max-width: 1277) {
   #logo {
-    font-size: 1rem; /* Ajusta el tamaño de fuente para pantallas medianas */
-    color:blue;
+    font-size: 1rem;
+    /* Ajusta el tamaño de fuente para pantallas medianas */
+    color: blue;
   }
 }
 
 
- 
+
 /*FORMULARIO */
-form{
+form {
   border: 1px solid rgb(229, 231, 235);
   padding: 1rem .5rem;
   height: 300px;
 }
 
-form label{
+form label {
   color: black;
 }
 
-form input{
+form input {
   border: 1px solid rgb(229, 231, 235);
 }
 
-form button{
+form button {
   background-color: rgb(229, 231, 235) !important;
   padding-block: .5rem;
-  
+
 }
 
-.text-card-mini{
-  font-size: 12px;
-  color:rgb(229, 231, 235) ;
+.text-card-mini {
+  font-size: 10px;
+  color: rgb(163, 163, 163);
+  font-weight: bold;
 }
+
+/*MODAL PROJECTO INFORMACION */ 
+.project-modal-info-containter-titulo p {
+
+  line-height: 0;
+  padding-top: .2rem;
+
+}
+
+
+

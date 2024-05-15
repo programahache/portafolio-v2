@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import Header from './components/header/Header';
-import { Outlet } from 'react-router-dom';
+
+
+import Projects from './components/projects/Projects';
 
 function App() {
 
@@ -10,7 +12,8 @@ function App() {
     <div>
       <Header />
       <main>
-        <Outlet />
+        <Projects />
+
       </main>
     </div>
   );

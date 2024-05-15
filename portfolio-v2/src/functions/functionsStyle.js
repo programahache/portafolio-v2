@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Tu código JavaScript aquí
+    
 
     const textoCambiante = document.getElementById('logo');
 
