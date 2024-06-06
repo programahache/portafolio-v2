@@ -41,10 +41,25 @@ main {
 .navegacion {
   position: sticky;
   top: 0;
-  background-color: white;
   opacity: 1;
   transition: opacity 0.3s;
   z-index: 1;
+}
+
+.active {
+  text-decoration: line-through;
+  font-weight: bold;
+  color: rgb(102, 102, 102);
+}
+
+#arrow{
+  fill: aqua !important;
+}
+
+nav a:hover {
+  text-decoration: line-through;
+  color: rgb(43, 42, 42);
+  transition: all ease .5s;
 }
 
 .texto-logo-oculto {
@@ -56,7 +71,9 @@ main {
 }
 
 #logo {
-  font-size: 8.5rem;
+  font-size: 10vw;
+  transition: font-size 0.5s;
+  /* Transición suave para cambios de tamaño */
 }
 
 #logo {
@@ -67,9 +84,6 @@ h1:hover .texto-logo-oculto {
   opacity: 1;
 }
 
-.information {
-  width: 50%;
-}
 
 .information p {
   font-size: 14px;
@@ -82,7 +96,7 @@ h1:hover .texto-logo-oculto {
 .information-2 h3 {
   font-size: 28px;
 
-  color: var(--negro);
+ 
   line-height: 1.2;
 }
 
@@ -97,6 +111,7 @@ h1:hover .texto-logo-oculto {
   .project-card {
     width: 100%;
   }
+
 }
 
 .contenedor-img {
@@ -106,15 +121,15 @@ h1:hover .texto-logo-oculto {
 
 }
 
+
+
 .container-cont-img {
-  background-color: rgba(235, 235, 235, 0.938);
+ 
   padding: 1.5rem;
   transition: background-color .2s ease-out
 }
 
-.container-cont-img:hover {
-  background-color: rgb(189, 189, 189);
-}
+
 
 .contenedor-img img {
   text-align: center;
@@ -130,17 +145,61 @@ h1:hover .texto-logo-oculto {
 
   header {
     width: 100% !important;
-    padding: none;
+    padding-inline: 0.5rem;
 
   }
 
-  main {}
+  .d-movil {
+    display: none;
+  }
+
+  .d-movil-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+
+  main {
+    margin-top: 100px;
+    padding-inline: 1rem;
+  }
 
   #logo {
-    font-size: 2rem !important;
+    font-size: 10.5vw !important;
+    padding-block: .5rem;
+    width: 100%;
     /* Reduce el tamaño de fuente para pantallas pequeñas */
 
   }
+
+  .project-modal-info-container>.text-slate-700 {
+    font-size: 2.5vw;
+    letter-spacing: -0.001cm;
+
+  }
+
+  .texto-logo-oculto {
+    opacity: 1;
+  }
+
+  .information {
+    font-size: 12px;
+    letter-spacing: -0.001cm;
+  }
+
+  .information-2 {
+    font-size: 13px;
+    letter-spacing: -0.001cm;
+  }
+
+  .information-2>h3 {
+    font-size: 20px;
+    letter-spacing: -0.001cm;
+  }
+
+
 }
 
 /* Ajusta el tamaño de fuente en pantallas medianas */
@@ -165,6 +224,10 @@ h1:hover .texto-logo-oculto {
     font-size: 1rem;
     /* Ajusta el tamaño de fuente para pantallas medianas */
     color: blue;
+  }
+
+  main{
+    margin-top: 228px;
   }
 }
 
@@ -197,7 +260,7 @@ form button {
   font-weight: bold;
 }
 
-/*MODAL PROJECTO INFORMACION */ 
+/*MODAL PROJECTO INFORMACION */
 .project-modal-info-containter-titulo p {
 
   line-height: 0;
@@ -205,5 +268,17 @@ form button {
 
 }
 
+/* LAYOUTS */
 
+.open{
+  display: block;
+}
+.closed{
+  display: none;
+}
+
+.contenedor-firma img{
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+}
 

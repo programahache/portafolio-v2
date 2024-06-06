@@ -8,11 +8,10 @@ function App() {
 
 
   return (
-    <div>
+    <div className='dark:bg-black bg-white'>
       <Header />
-      <main>
+      <main className='dark:bg-neutral-800 dark:text-white bg-white' >
         <Projects />
-
       </main>
     </div>
   );

@@ -1,20 +1,19 @@
 
-import medbyteAi from '../../img/medbyte-ai.png'
-import Dashboard from '../../img/Dashboard.png'
-import controlGastos from '../../img/controlGastos.png'
-import CriptoApp from '../../img/CriptoApp.png'
-import Dishmechol from '../../img/Dishmechol.png'
-import Juegos from '../../img/Juegos.png'
-import Lading from '../../img/landing-medbyte-ai.png'
-import citas from '../../img/medbyte-co-citas-wagner-rojas.png'
-import prueba from '../../img/prueba.jpg'
-import universe808 from '../../img/universe808.png'
-import wagnerRojas from '../../img/wagnerRojas.png'
-import GDLWebcam from '../../img/GDLWebcam.png'
+import medbyteAi from '../../img/medbyte-ai.webp'
+import Dashboard from '../../img/Dashboard.webp'
+import controlGastos from '../../img/controlGastos.webp'
+import CriptoApp from '../../img/CriptoApp.webp'
+import Dishmechol from '../../img/Dishmechol.webp'
+import Juegos from '../../img/Juegos.webp'
+import Lading from '../../img/landing-medbyte-ai.webp'
+import citas from '../../img/medbyte-co-citas-wagner-rojas.webp'
+import prueba from '../../img/prueba.webp'
+import universe808 from '../../img/universe808.webp'
+import wagnerRojas from '../../img/wagnerRojas.webp'
+import GDLWebcam from '../../img/GDLWebcam.webp'
 
-import ProjectInfoModal from '../Projects/ProjectInfoModal'
 
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 
 function ProjectCard() {
@@ -117,15 +116,15 @@ function ProjectCard() {
             desing: "Esteban Herrera"
         },
         {
-            nombre: "Juego",
+            nombre: "CriptoApp",
             empresa: "Independiente",
-            numero: '09',
-            img: Juegos,
-            tecnologias: ["HTMLS", "CSS", "Bootstrap", "JavaScript"],
-            desc: "En un momento de aburrimiento, decidi crear este juego para estas ocaciones asi espero que lo disfrutes ",
-            ano: "2018",
+            numero: '04',
+            img: CriptoApp,
+            tecnologias: ["HTMLS", "CSS", "Bootstrap", "JavaScript", "React"],
+            desc: "Proyecto en el cual aprendi a consumir APIS, aun lo uso para operar en criptos ",
+            ano: "2020",
             rol: "Developer",
-            desing: "Harold Palacios"
+            desing: "Juan de la cruz"
         },
         {
             nombre: "Control Gasto",
@@ -150,26 +149,26 @@ function ProjectCard() {
             desing: "Samir Basante"
         },
 
-
-
         {
-            nombre: "CriptoApp",
+            nombre: "Juego",
             empresa: "Independiente",
-            numero: '04',
-            img: CriptoApp,
-            tecnologias: ["HTMLS", "CSS", "Bootstrap", "JavaScript", "React"],
-            desc: "Proyecto en el cual aprendi a consumir APIS, aun lo uso para operar en criptos ",
-            ano: "2020",
+            numero: '09',
+            img: Juegos,
+            tecnologias: ["HTMLS", "CSS", "Bootstrap", "JavaScript"],
+            desc: "En un momento de aburrimiento, decidi crear este juego para estas ocaciones asi espero que lo disfrutes ",
+            ano: "2018",
             rol: "Developer",
-            desing: "Juan de la cruz"
+            desing: "Harold Palacios"
         },
+
+
     ]
 
     return (
-        <div className='grid justify-center items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 gap-4'>
+        <div className='dark:bg-neutral-800 dark:text-white bg-white grid justify-center items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 gap-4 2xl:mt-80 mt-10'>
             {
                 Project.map((project, index) => (
-                    <Link
+                    <NavLink
                         to={`proyectos/proyectoInfo/${project.nombre}`} state={{
                             tecnologias: project.tecnologias,
                             des: project.desc,
@@ -177,10 +176,12 @@ function ProjectCard() {
                             id: project.numero,
                             empresa: project.empresa,
                             img: project.img,
-                            ano:project.ano,
-                            rol:project.rol,
-                            desing:project.desing
-                        }}>
+                            ano: project.ano,
+                            rol: project.rol,
+                            desing: project.desing
+                        }}
+
+                    >
                         <div key={index} className='project-card mb-20 cursor-pointer'>
                             <div className='flex justify-between items-center mt-2'>
                                 <div className='leading-none'>
@@ -191,13 +192,13 @@ function ProjectCard() {
                                     <p>{project.numero}</p>
                                 </div>
                             </div>
-                            <div className='text-center mt-5 container-cont-img flex items-center justify-center '>
+                            <div className='text-center mt-5 bg-neutral-300 hover:bg-neutral-400 dark:bg-neutral-700 bg-withe hover:dark:bg-neutral-600 container-cont-img flex items-center justify-center '>
                                 <div className='contenedor-img'>
                                     <img src={project.img} alt="" />
                                 </div>
                             </div>
                         </div>
-                    </Link>
+                    </NavLink>
 
                 ))
             }
